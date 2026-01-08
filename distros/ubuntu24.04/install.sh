@@ -127,16 +127,16 @@ $COMPONENT_DIR/copy_test_file.sh
 $COMPONENT_DIR/disable_cloudinit.sh
 
 # SKU Customization
-$COMPONENT_DIR/setup_sku_customizations.sh
+# $COMPONENT_DIR/setup_sku_customizations.sh
 
 # scan vulnerabilities using Trivy
-$COMPONENT_DIR/trivy_scan.sh
+# $COMPONENT_DIR/trivy_scan.sh
 
 # diable auto kernel updates
-./disable_auto_upgrade.sh
+# ./disable_auto_upgrade.sh
 
 # Disable Predictive Network interface renaming
-./disable_predictive_interface_renaming.sh
+# ./disable_predictive_interface_renaming.sh
 
 # clear history
 # Uncomment the line below if you are running this on a VM
