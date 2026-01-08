@@ -31,33 +31,33 @@ if [ "$SKU" != "GB200" ]; then
 fi
 
 # install DOCA OFED
-$COMPONENT_DIR/install_doca.sh
+# $COMPONENT_DIR/install_doca.sh
 
 # install PMIX
-$COMPONENT_DIR/install_pmix.sh
+# $COMPONENT_DIR/install_pmix.sh
 
 # install mpi libraries
-$COMPONENT_DIR/install_mpis.sh
+# $COMPONENT_DIR/install_mpis.sh
 
 if [ "$GPU" = "NVIDIA" ]; then
     # install nvidia gpu driver
 
-    if [ "$SKU" = "GB200" ]; then
+    # if [ "$SKU" = "GB200" ]; then
         # For GB200, pass SKU to install the correct driver
-        ./install_nvidiagpudriver_gb200.sh
+        # ./install_nvidiagpudriver_gb200.sh
 
         # Install NVSHMEM
-        ./install_nvshmem_gb200.sh
+        # ./install_nvshmem_gb200.sh
 
         # Install NVLOOM
-        ./install_nvloom_gb200.sh
+        # ./install_nvloom_gb200.sh
 
         # Install NVBandwidth tool
-        $COMPONENT_DIR/install_nvbandwidth_tool.sh
+        # $COMPONENT_DIR/install_nvbandwidth_tool.sh
 
-    else
-        $COMPONENT_DIR/install_nvidiagpudriver.sh
-    fi
+    # else
+        # $COMPONENT_DIR/install_nvidiagpudriver.sh
+    # fi
     
     # Install NCCL
     $COMPONENT_DIR/install_nccl.sh
